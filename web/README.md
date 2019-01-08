@@ -45,30 +45,27 @@ func readFile(filename string) (map[string]string, error) {
 ```datadata.json``` 中的数据如下：
 ```json
 {
-  "wxl": "16340241",
-  "xiaoming": "16340001",
-  "trump": "16340002"
+  "zjl": "16340300",
+  "zbr": "16340297",
+  "zzx": "16340299"
 }
 ```
 **测试结果**
 ```
-$ curl http://localhost:8080/?wxl=?
-16340241
+$ curl http://localhost:8080/?zjl=?
+16340300
 
-$ curl  http://localhost:8080/?xiaoming=?
-16340001
+$ curl  http://localhost:8080/?zbr=?
+16340297
 
-$ curl  http://localhost:8080/?trump=?
-16340002
+$ curl  http://localhost:8080/?zzx=?
+16340299
 
-$ curl  http://localhost:8080/?nobody=?  ### 姓名不存在
-This name does not exist!
-```
 ---
 ## ab 测试
 执行 ab 测试：
 ```
-$ ab -n 1000 -c 100 http://localhost:8080/?wxl=?
+$ ab -n 1000 -c 100 http://localhost:8080/?zjl=?
 This is ApacheBench, Version 2.3 <$Revision: 1430300 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
